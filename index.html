@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>张鑫晶个人简历</title>
+<meta name="description" content="张鑫晶 - 全链路运营专家">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#2a6df4;--primary-light:#eef3ff;--primary-dark:#1a4fbf;--accent:#7c3aed;--accent-light:#f5f0ff;--bg:#f8fafc;--card:#fff;--text:#0f172a;--text-secondary:#475569;--text-muted:#94a3b8;--border:#e2e8f0;--radius:16px;--radius-sm:10px;--shadow:0 1px 3px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.06);--shadow-lg:0 8px 32px rgba(0,0,0,.08);--max-w:1100px;--nav-h:64px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans SC','Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,255,255,.85);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:100;display:flex;align-items:center;justify-content:center}
+nav .inner{width:100%;max-width:var(--max-w);padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+nav .logo{font-weight:700;font-size:18px;color:var(--text);cursor:pointer}
+nav .logo span{color:var(--primary)}
+nav .links{display:flex;gap:8px;list-style:none;align-items:center}
+nav .links a{text-decoration:none;color:var(--text-secondary);font-size:14px;font-weight:500;padding:6px 14px;border-radius:8px;transition:.2s;cursor:pointer}
+nav .links a:hover{background:var(--primary-light);color:var(--primary)}
+nav .links .dl{background:var(--primary);color:#fff;font-weight:600}
+nav .links .dl:hover{background:var(--primary-dark);color:#fff}
+nav .links .admin-btn{background:transparent;border:1.5px dashed var(--border);color:var(--text-muted);font-size:13px;padding:6px 12px;border-radius:8px;cursor:pointer;transition:.2s;font-family:inherit}
+nav .links .admin-btn:hover{border-color:var(--primary);color:var(--primary);background:var(--primary-light)}
+nav .links .admin-btn.active{background:var(--primary);color:#fff;border-style:solid;border-color:var(--primary)}
+.nav-spacer{height:var(--nav-h)}
+.admin-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:2px solid var(--primary);z-index:200;padding:8px 16px;box-shadow:0 -4px 20px rgba(0,0,0,.1)}
+.admin-bar.open{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.admin-bar label{font-size:12px;font-weight:600;color:var(--text-secondary);white-space:nowrap}
+.admin-bar select,.admin-bar input[type="color"]{height:32px;border:1px solid var(--border);border-radius:6px;padding:0 8px;font-size:13px;background:#fff}
+.admin-bar select{min-width:100px}
+.admin-bar input[type="color"]{width:36px;padding:2px;cursor:pointer}
+.admin-bar .done-btn{background:var(--primary);color:#fff;border:none;padding:6px 20px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;margin-left:auto}
+.admin-bar .save-btn{background:#10b981;color:#fff;border:none;padding:6px 18px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer}
+.admin-bar .save-btn:hover{opacity:.85}
+.admin-bar .done-btn:hover{opacity:.85}
+.admin-status{position:fixed;top:calc(var(--nav-h) + 8px);right:16px;z-index:99;background:#10b981;color:#fff;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;display:none;align-items:center;gap:5px;box-shadow:0 2px 10px rgba(16,185,129,.3)}
+.admin-status.show{display:flex}
+.admin-status .dot{width:8px;height:8px;border-radius:50%;background:#fff}
+.hero{position:relative;padding:60px 24px 50px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.hero-bg .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.25}
+.hero-bg .orb:nth-child(1){width:500px;height:500px;background:var(--primary);top:-120px;right:-80px}
+.hero-bg .orb:nth-child(2){width:400px;height:400px;background:var(--accent);bottom:-100px;left:-60px}
+.hero .inner{position:relative;max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:48px;flex-wrap:wrap}
+.hero-text{flex:1;min-width:300px}
+.hero-text .badge{display:inline-flex;align-items:center;gap:6px;background:var(--primary-light);color:var(--primary);font-size:13px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:16px}
+.hero-text h1{font-size:clamp(28px,5vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:12px}
+.hero-text h1 .highlight{background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-text .subtitle{font-size:clamp(14px,2vw,18px);color:var(--text-secondary);margin-bottom:16px}
+.hero-text .tagline{color:var(--text-muted);font-size:14px;line-height:1.7;max-width:560px}
+.hero-text .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hero-text .actions a{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;transition:.25s;cursor:pointer}
+.hero-text .actions .btn-primary{background:var(--primary);color:#fff}
+.hero-text .actions .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(42,109,244,.3)}
+.hero-text .actions .btn-outline{border:1.5px solid var(--border);color:var(--text)}
+.hero-visual{flex-shrink:0;width:180px;height:180px;border-radius:50%;overflow:hidden;box-shadow:0 12px 48px rgba(42,109,244,.15);border:3px solid rgba(255,255,255,.8)}
+.hero-visual img{width:100%;height:100%;object-fit:cover}
+.editable{padding:2px 4px;border-radius:4px;transition:.2s;cursor:default}
+.edit-mode .editable{cursor:text}
+.edit-mode .editable:hover{background:rgba(42,109,244,.08);outline:1px dashed var(--primary)}
+.edit-mode .editable:focus{background:#fff;outline:2px solid var(--primary);box-shadow:0 0 0 4px rgba(42,109,244,.1)}
+section{padding:48px 24px;max-width:var(--max-w);margin:0 auto}
+section .section-header{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+section .section-header .icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+section .section-header h2{font-size:22px;font-weight:700}
+section .section-header .line{flex:1;height:1px;background:var(--border)}
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--border);border-radius:1px}
+.timeline-item{position:relative;margin-bottom:32px;padding-left:20px;cursor:default}
+.timeline-item:last-child{margin-bottom:0}
+.timeline-dot{position:absolute;left:-24px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--card);border:2.5px solid var(--primary);z-index:2}
+.timeline-item.intern .timeline-dot{border-color:var(--accent)}
+.timeline-item.campus .timeline-dot{border-color:#0891b2}
+.timeline-item.current .timeline-dot{background:var(--primary);box-shadow:0 0 0 4px rgba(42,109,244,.15)}
+.timeline-header{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-bottom:4px}
+.timeline-header .company{font-size:16px;font-weight:700;color:var(--text)}
+.timeline-header .role{font-size:13px;color:var(--text-secondary);font-weight:500;background:var(--primary-light);padding:2px 10px;border-radius:6px}
+.timeline-header .date{font-size:12px;color:var(--text-muted);font-weight:500;margin-left:auto}
+.timeline-body{margin-top:6px}
+.timeline-body p{font-size:14px;color:var(--text-secondary);margin-bottom:4px;line-height:1.7}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:24px;transition:.25s;box-shadow:var(--shadow)}
+.card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.card .card-icon{font-size:28px;margin-bottom:10px}
+.card h3{font-size:15px;font-weight:600;margin-bottom:6px}
+.card p{font-size:13px;color:var(--text-secondary);line-height:1.7}
+.skills-grid{display:flex;flex-wrap:wrap;gap:8px}
+.skill-tag{padding:8px 18px;border-radius:20px;font-size:14px;font-weight:500;background:var(--card);border:1px solid var(--border);transition:.2s;cursor:default}
+.skill-tag:hover{border-color:var(--primary);color:var(--primary);background:var(--primary-light)}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);z-index:300;align-items:center;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:16px;padding:32px;width:90%;max-width:400px;box-shadow:0 24px 64px rgba(0,0,0,.15)}
+.modal h2{font-size:20px;font-weight:700;margin-bottom:6px}
+.modal p{font-size:14px;color:var(--text-secondary);margin-bottom:20px}
+.modal input{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:15px;margin-bottom:14px;outline:none;transition:.2s;box-sizing:border-box}
+.modal input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(42,109,244,.1)}
+.modal .modal-actions{display:flex;gap:10px;justify-content:flex-end}
+.modal .modal-actions button{padding:8px 24px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;border:none;transition:.2s;font-family:inherit}
+.modal .modal-actions .btn-cancel{background:#f1f5f9;color:var(--text-secondary)}
+.modal .modal-actions .btn-confirm{background:var(--primary);color:#fff}
+.modal .error{color:#ef4444;font-size:13px;display:none;margin-bottom:10px}
+footer{text-align:center;padding:32px 24px;color:var(--text-muted);font-size:13px;border-top:1px solid var(--border);margin-top:32px}
+footer a{color:var(--primary);text-decoration:none;cursor:pointer}
+@media(max-width:768px){
+nav .links{display:none}
+nav .links.mobile-open{display:flex;flex-direction:column;position:fixed;top:var(--nav-h);left:0;right:0;background:rgba(255,255,255,.98);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px;gap:4px;z-index:98}
+nav .menu-toggle{display:flex!important;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:none;cursor:pointer;color:var(--text);border-radius:8px}
+nav .menu-toggle:hover{background:var(--primary-light)}
+.hero{padding:40px 16px 30px}
+.hero .inner{flex-direction:column-reverse;text-align:center}
+.hero-text .actions{justify-content:center}
+.hero-visual{width:140px;height:140px}
+.timeline-header .date{margin-left:0;width:100%}
+.cards{grid-template-columns:1fr}
+.admin-bar{flex-direction:column;padding:10px 12px;gap:6px;max-height:260px;overflow-y:auto}
+.admin-bar .done-btn{margin-left:0}
+}
+nav .menu-toggle{display:none}
+</style>
+</head>
+<body>
+<nav><div class="inner">
+<div class="logo" onclick="location.href='/'">张鑫晶<span>.</span></div>
+<button class="menu-toggle" id="menuToggle" aria-label="菜单"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.5 5h15M2.5 10h15M2.5 15h15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+<ul class="links" id="navLinks">
+<li><a href="#experience" class="nav-link">工作经历</a></li>
+<li><a href="#internship" class="nav-link">实习经历</a></li>
+<li><a href="#campus" class="nav-link">校园经历</a></li>
+<li><a href="#education" class="nav-link">教育背景</a></li>
+<li><a href="#skills" class="nav-link">技能特长</a></li>
+<li><button class="admin-btn" id="adminLoginBtn">🔑 管理</button></li>
+<li><a class="dl" id="dlNav">下载简历</a></li>
+</ul></div></nav>
+<div class="nav-spacer"></div>
+<div class="admin-status" id="adminStatus"><span class="dot"></span> 管理员模式已开启</div>
+<div class="modal-overlay" id="loginModal"><div class="modal">
+<h2>管理员验证</h2><p>请输入管理员密码以编辑简历内容</p>
+<div class="error" id="loginError">密码错误，请重试</div>
+<input type="password" id="passwordInput" placeholder="请输入管理员密码" autocomplete="off">
+<div class="modal-actions"><button class="btn-cancel" onclick="closeLogin()">取消</button><button class="btn-confirm" onclick="verifyPassword()">确认</button></div></div></div>
+<div class="admin-bar" id="adminBar">
+<label>字体</label><select id="fontSelect"><option value="inherit">默认</option><option value="Noto Sans SC,Inter,sans-serif">Noto Sans SC</option><option value="Inter,Noto Sans SC,sans-serif">Inter</option><option value="STSong,serif">宋体</option><option value="SimHei,sans-serif">黑体</option><option value="KaiTi,serif">楷体</option><option value="FangSong,serif">仿宋</option></select>
+<label>粗细</label><select id="weightSelect"><option value="inherit">默认</option><option value="300">Light 300</option><option value="400">Regular 400</option><option value="500">Medium 500</option><option value="600">SemiBold 600</option><option value="700">Bold 700</option><option value="800">ExtraBold 800</option></select>
+<label>颜色</label><input type="color" id="colorPicker" value="#0f172a">
+<button class="save-btn" onclick="saveAllChanges()">💾 保存</button>
+<button class="done-btn" onclick="exitAdminMode()">退出管理</button></div>
+<section class="hero"><div class="hero-bg"><div class="orb"></div><div class="orb"></div><div class="grid" style="position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.3"></div></div>
+<div class="inner"><div class="hero-text">
+<div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>在线简历</div>
+<h1><span class="editable" data-key="hero-name">张鑫晶</span> <span class="highlight"><span class="editable" data-key="hero-title">全链路运营专家</span></span></h1>
+<p class="subtitle"><span class="editable" data-key="hero-subtitle">互联网大厂运营 · 团队管理 · 跨境电商产品经理 · 3.5 年管理经验</span></p>
+<p class="tagline"><span class="editable" data-key="hero-tagline">从供应链到消费者，从品类规划到直播主持，用数据驱动增长，以结果导向落地。美团、格力、跨境电商 — 横跨平台与品牌的全能操盘手。</span></p>
+<div class="actions"><a class="btn-primary" id="dlHero"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>下载简历 PDF</a><a href="#experience" class="btn-outline">浏览履历</a></div></div>
+<div class="hero-visual"><img src="avatar.jpg" alt="张鑫晶证件照"></div></div></section>
+<section id="experience"><div class="section-header"><div class="icon" style="background:var(--primary-light);color:var(--primary)">💼</div><h2>工作经历</h2><div class="line"></div></div>
+<div class="timeline"><div class="timeline-item current"><div class="timeline-dot"></div><div class="timeline-header"><span class="company editable" data-key="exp1-company">重庆异连科技有限公司</span><span class="role editable" data-key="exp1-role">商品管理</span><span class="date editable" data-key="exp1-date">2025.10 – 2026.04</span></div><div class="timeline-body"><p>· <span class="editable" data-key="exp1-d1">主导搭建新品准入标准与审核流程，完成业绩贡献占比 ≥95% 的头部类目禁限售规则梳理，推动 100% 系统标签化</span></p><p>· <span class="editable" data-key="exp1-d2">独立搭建覆盖"引入—盘点—授权—清退"的品牌全流程管理体系，完成 1700+ 品牌的系统盘点与分层定级</span></p><p>· <span class="editable" data-key="exp1-d3">按 GL 类目统筹推进全量产品 AVN 盘点及 JBP 方案收集，综合运用调价、Straight pay、订单模式调整等策略补足亚马逊利润缺口</span></p><p>· <span class="editable" data-key="exp1-d4">独立主导 NPPM 监控专项机制，建立周度数据分析报告与复盘会机制，Beauty 类目 NPPM 实际达 43%，较目标 37% 超额完成</span></p></div></div>
+<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><span class="company editable" data-key="exp2-company">四川奈思电子商务有限公司</span><span class="role editable" data-key="exp2-role">产品经理 / 项目负责人</span><span class="date editable" data-key="exp2-date">2022.11 – 2025.02</span></div><div class="timeline-body"><p>· <span class="editable" data-key="exp2-d1">担任产品经理，负责商品开发团队业绩管理与团队搭建，管理人数 21 人</span></p><p>· <span class="editable" data-key="exp2-d2">担任亚马逊新品团队负责人，新品终审 30 天动销率从 35% 提升至 65%（峰值 70%+），新品业绩占比从 15% 提升到 20%</span></p><p>· <span class="editable" data-key="exp2-d3">担任亚马逊精品团队开发经理兼项目负责人，通过用户/竞对/供应商调研完成产品立项与全生命周期管理</span></p><p>· <span class="editable" data-key="exp2-d4">因业绩突出，获 3 次专项外派培训：《产品为王》《GTM 项目操盘》及行业精品公司老板咨询辅导</span></p></div></div>
+<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><span class="company editable" data-key="exp3-company">美团</span><span class="role editable" data-key="exp3-role">产品运营 / 品类规划</span><span class="date editable" data-key="exp3-date">2021.03 – 2022.10</span></div><div class="timeline-body"><p>· <span class="editable" data-key="exp3-d1">2021.03–2021.08 美团优选广东区非食组，担任纸品湿巾运营。通过商品分层策略实现销售持续增长，4–7 月目标达成率非食团队第一，绩效连续四个月得 A</span></p><p>· <span class="editable" data-key="exp3-d2">拆解毛利率公式，从成本优化与资源置换维度提毛利，纸品毛利率从 5% 提升到 7.5%</span></p><p>· <span class="editable" data-key="exp3-d3">2021.08–2022.10 美团总部品类规划组行业运营专员，推进品类角色、新品运营、费用资源梳理等项目</span></p></div></div>
+<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-header"><span class="company editable" data-key="exp4-company">珠海格力电器股份有限公司</span><span class="role editable" data-key="exp4-role">电商运营专员</span><span class="date editable" data-key="exp4-date">2020.07 – 2021.02</span></div><div class="timeline-body"><p>· <span class="editable" data-key="exp4-d1">担任天猫冰箱运营，负责销售规划、活动策划、流量推广、数据分析。双十一大促销售额同比 64%，流量同比 84%</span></p><p>· <span class="editable" data-key="exp4-d2">对天猫与京东平台销售数据从 0 到 1 规范化整顿，推动部门数据库搭建</span></p><p>· <span class="editable" data-key="exp4-d3">通过全公司层层选拔，担任董明珠直播主持人（山东站），全天销售额 52.8 亿</span></p></div></div></div></section>
+<section id="internship"><div class="section-header"><div class="icon" style="background:var(--accent-light);color:var(--accent)">🔬</div><h2>实习经历</h2><div class="line"></div></div>
+<div class="timeline"><div class="timeline-item intern"><div class="timeline-dot"></div><div class="timeline-header"><span class="company editable" data-key="int1-company">石天资本</span><span class="role editable" data-key="int1-role">投资经理</span><span class="date editable" data-key="int1-date">2020.02 – 2020.07</span></div><div class="timeline-body"><p>· <span class="editable" data-key="int1-d1">对节能环保企业战略融资项目实地调研，组建团队并主导前期整体尽职调查</span></p><p>· <span class="editable" data-key="int1-d2">参与智能驾驶企业融资项目，与团队共同跟进投资人，最终成功融资 4500 万</span></p><p>· <span class="editable" data-key="int1-d3">参与新三板挂牌企业 IPO 转板项目，通过业务助推提升企业估值</span></p></div></div>
+<div class="timeline-item intern"><div class="timeline-dot"></div><div class="timeline-header"><span class="company editable" data-key="int2-company">快车道人才加速器</span><span class="role editable" data-key="int2-role">团队联合创始人 / 暑期人才官</span><span class="date editable" data-key="int2-date">2020.02 – 2020.07</span></div><div class="timeline-body"><p>· <span class="editable" data-key="int2-d1">两次担任快车道威海团队联合创始人，一次担任哈工大学分课教练</span></p><p>· <span class="editable" data-key="int2-d2">参与暑期人才官项目，安排百余名学员进入三十多家合作企业实习或全职工作</span></p><p>· <span class="editable" data-key="int2-d3">作为公司咨询项目发起人，组建咨询团队并培训成员，为十余个团队提供咨询服务</span></p></div></div></div></section>
+<section id="campus"><div class="section-header"><div class="icon" style="background:#ecfeff;color:#0891b2">🎓</div><h2>校园经历</h2><div class="line"></div></div>
+<div class="timeline"><div class="timeline-item campus"><div class="timeline-dot"></div><div class="timeline-header"><span class="company editable" data-key="cam1-company">掌门一对一</span><span class="role editable" data-key="cam1-role">英语老师</span><span class="date editable" data-key="cam1-date">2017.07 – 2019.06</span></div><div class="timeline-body"><p>· <span class="editable" data-key="cam1-d1">线上一对一英语家教，每学期带 5 人以上，学生家长好评率 100%</span></p></div></div>
+<div class="timeline-item campus"><div class="timeline-dot"></div><div class="timeline-header"><span class="company editable" data-key="cam2-company">红承社</span><span class="role editable" data-key="cam2-role">会长</span><span class="date editable" data-key="cam2-date">2017.07 – 2018.07</span></div><div class="timeline-body"><p>· <span class="editable" data-key="cam2-d1">15/18 高票选为会长，统筹活动管理，社团规模翻番，活动经费全部由赞助提供，荣获校级优秀社团活动</span></p></div></div>
+<div class="timeline-item campus"><div class="timeline-dot"></div><div class="timeline-header"><span class="company editable" data-key="cam3-company">学生会</span><span class="role editable" data-key="cam3-role">宣传部、外联部双部门干事</span><span class="date editable" data-key="cam3-date">2016.10 – 2017.07</span></div><div class="timeline-body"><p>· <span class="editable" data-key="cam3-d1">负责学院赞助商谈，协助促成了海洋学院爱钓客社团的成立，负责通讯撰写和微信公众号推送</span></p></div></div>
+<div class="timeline-item campus"><div class="timeline-dot"></div><div class="timeline-header"><span class="company editable" data-key="cam4-company">山东大学图书馆</span><span class="role editable" data-key="cam4-role">图书馆管理员</span><span class="date editable" data-key="cam4-date">2016.09 – 2019.09</span></div><div class="timeline-body"><p>· <span class="editable" data-key="cam4-d1">连续三年担任图书馆三楼管理员，负责图书整理、包装及贴标签等工作</span></p></div></div></div></section>
+<section id="education"><div class="section-header"><div class="icon" style="background:#f0fdf4;color:#16a34a">📖</div><h2>教育背景</h2><div class="line"></div></div>
+<div class="cards"><div class="card"><div class="card-icon">🎓</div><h3 class="editable" data-key="edu-title">山东大学</h3><p><strong class="editable" data-key="edu-major">电子商务</strong> 本科 · <span class="editable" data-key="edu-date">2016.09 – 2020.06</span></p><p style="margin-top:6px"><span class="editable" data-key="edu-note">在校成绩优异，连续获得三等奖学金</span></p></div>
+<div class="card"><div class="card-icon">📜</div><h3 class="editable" data-key="cert-title">技能证书</h3><p class="editable" data-key="cert-desc">全国计算机等级考试四级数据库技术、四级网络技术</p><p class="editable" data-key="cert-eng">英语 CET-4 / CET-6</p></div></div></section>
+<section id="skills"><div class="section-header"><div class="icon" style="background:#fef3c7;color:#d97706">⚡</div><h2>技能特长与自我评价</h2><div class="line"></div></div>
+<div class="cards" style="margin-bottom:20px"><div class="card"><div class="card-icon">🛠️</div><h3 class="editable" data-key="skill-title">专业技能</h3><div class="skills-grid" style="margin-top:10px"><span class="skill-tag editable" data-key="skill-1">Excel 精通</span><span class="skill-tag editable" data-key="skill-2">PPT 精通</span><span class="skill-tag editable" data-key="skill-3">SQL</span><span class="skill-tag editable" data-key="skill-4">数据分析</span><span class="skill-tag editable" data-key="skill-5">品类规划</span><span class="skill-tag editable" data-key="skill-6">产品开发</span><span class="skill-tag editable" data-key="skill-7">供应链管理</span><span class="skill-tag editable" data-key="skill-8">VC 账号运营</span><span class="skill-tag editable" data-key="skill-9">英语阅读</span></div></div>
+<div class="card"><div class="card-icon">🌟</div><h3 class="editable" data-key="strength-title">核心优势</h3><p style="margin-top:8px"><span class="editable" data-key="str1">· 互联网大厂一线运营经验 + 集团总部品类规划成功落地经验</span></p><p><span class="editable" data-key="str2">· 大型直播主持经历 — 董明珠直播山东站主持人</span></p><p><span class="editable" data-key="str3">· 三年半的团队管理经验，有团队搭建及优化调整能力</span></p><p><span class="editable" data-key="str4">· 多年跨境电商产品及运营管理经验</span></p><p><span class="editable" data-key="str5">· 管理与沟通能力强，有全局观和责任心</span></p></div></div></div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:24px"><h3 style="font-size:15px;font-weight:600;margin-bottom:8px">💬 <span class="editable" data-key="eval-title">自我评价</span></h3><p style="font-size:14px;color:var(--text-secondary);line-height:1.8"><span class="editable" data-key="eval-text">有互联网大厂一线运营经验、集团总部品类规划成功落地经验、大型直播主持经历和较强的数据分析能力。三年半的团队管理经验，具备团队搭建及优化调整能力与解决问题的能力。多年跨境电商产品及运营管理经验，熟悉 VC 账号运营规则。管理沟通能力较强，有全局观、极强的责任心和团队意识。在校期间连续获得奖学金，精通 Excel、PPT、SQL 等软件。英语已过四六级，长期从事跨境电商行业，英语使用频繁。</span></p></div></section>
+<footer><p>© 2026 <span class="editable" data-key="footer-name">张鑫晶</span> · 在线简历 · <a id="dlFooter">下载 PDF 版本</a></p><p style="margin-top:4px">基于真实简历内容 · AI 构建</p></footer>
+<script>
+var ADMIN_PASSWORD='zhangxinjing2026',isAdmin=localStorage.getItem('resume_admin')==='true',activeElement=null;
+function init(){loadSavedContent();if(isAdmin)showAdminUI();setupDownloadButtons();setupMobileMenu();setupLoginModal();setupAdminBarEvents()}
+function loadSavedContent(){try{var s=JSON.parse(localStorage.getItem('resume_content')||'{}');document.querySelectorAll('.editable').forEach(function(e){var k=e.getAttribute('data-key');if(s[k]){if(s[k].text!==undefined)e.innerText=s[k].text;if(s[k].font)e.style.fontFamily=s[k].font;if(s[k].weight)e.style.fontWeight=s[k].weight;if(s[k].color)e.style.color=s[k].color}})}catch(e){}}
+function saveAllChanges(){var d={};document.querySelectorAll('.editable').forEach(function(e){var k=e.getAttribute('data-key');d[k]={text:e.innerText,font:e.style.fontFamily||'',weight:e.style.fontWeight||'',color:e.style.color||''}});localStorage.setItem('resume_content',JSON.stringify(d));showToast('所有修改已保存')}
+function showToast(m){var t=document.createElement('div');t.style.cssText='position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:#1e293b;color:#fff;padding:10px 24px;border-radius:10px;font-size:14px;z-index:500;box-shadow:0 8px 24px rgba(0,0,0,.15)';t.textContent=m;document.body.appendChild(t);setTimeout(function(){t.style.opacity='0';t.style.transition='opacity .3s';setTimeout(function(){t.remove()},300)},2000)}
+function openLogin(){document.getElementById('loginModal').classList.add('open');document.getElementById('passwordInput').value='';document.getElementById('loginError').style.display='none';document.getElementById('passwordInput').focus()}
+function closeLogin(){document.getElementById('loginModal').classList.remove('open')}
+function verifyPassword(){var p=document.getElementById('passwordInput').value;if(p===ADMIN_PASSWORD){isAdmin=true;localStorage.setItem('resume_admin','true');closeLogin();showAdminUI();showToast('管理员模式已开启，点击任意文本即可编辑')}else{document.getElementById('loginError').style.display='block';document.getElementById('passwordInput').value='';document.getElementById('passwordInput').focus()}}
+function showAdminUI(){document.getElementById('adminStatus').classList.add('show');document.getElementById('adminBar').classList.add('open');document.getElementById('adminLoginBtn').textContent='管理';document.getElementById('adminLoginBtn').classList.add('active');document.body.classList.add('edit-mode')}
+function exitAdminMode(){isAdmin=false;localStorage.setItem('resume_admin','false');document.getElementById('adminStatus').classList.remove('show');document.getElementById('adminBar').classList.remove('open');document.getElementById('adminLoginBtn').textContent='🔑 管理';document.getElementById('adminLoginBtn').classList.remove('active');document.body.classList.remove('edit-mode');activeElement=null}
+document.addEventListener('click',function(e){var t=e.target.closest('.editable');if(!t||!isAdmin)return;e.preventDefault();if(activeElement&&activeElement!==t)activeElement.removeAttribute('contenteditable');activeElement=t;t.setAttribute('contenteditable','true');t.focus();document.getElementById('fontSelect').value=t.style.fontFamily||'inherit';var w=t.style.fontWeight||window.getComputedStyle(t).fontWeight;document.getElementById('weightSelect').value=w;var c=t.style.color||'#0f172a';if(c==='rgb(15, 23, 42)')c='#0f172a';document.getElementById('colorPicker').value=c;t.addEventListener('blur',function onBlur(){t.removeEventListener('blur',onBlur);t.removeAttribute('contenteditable')},{once:true})})
+function setupAdminBarEvents(){document.getElementById('fontSelect').addEventListener('change',function(){if(activeElement)activeElement.style.fontFamily=this.value});document.getElementById('weightSelect').addEventListener('change',function(){if(activeElement)activeElement.style.fontWeight=this.value});document.getElementById('colorPicker').addEventListener('input',function(){if(activeElement)activeElement.style.color=this.value})}
+document.getElementById('adminLoginBtn').addEventListener('click',function(){if(isAdmin){exitAdminMode();showToast('已退出管理员模式')}else{openLogin()}})
+document.getElementById('loginModal').addEventListener('click',function(e){if(e.target===this)closeLogin()})
+function setupDownloadButtons(){document.getElementById('dlNav').addEventListener('click',downloadPDF);document.getElementById('dlHero').addEventListener('click',downloadPDF);document.getElementById('dlFooter').addEventListener('click',downloadPDF)}
+function downloadPDF(e){if(e)e.preventDefault();var l=document.createElement('a');l.href='简历-张鑫晶202605.pdf';l.download='简历-张鑫晶202605.pdf';document.body.appendChild(l);l.click();document.body.removeChild(l)}
+function setupMobileMenu(){document.getElementById('menuToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('mobile-open')});document.querySelectorAll('.nav-link').forEach(function(a){a.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('mobile-open')})})}
+function setupLoginModal(){document.getElementById('passwordInput').addEventListener('keydown',function(e){if(e.key==='Enter')verifyPassword()})}
+document.addEventListener('DOMContentLoaded',init)
+</script>
+</body>
+</html>
